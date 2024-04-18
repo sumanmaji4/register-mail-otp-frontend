@@ -161,7 +161,7 @@ const SignUp: FC<SignUpProps> = ({}) => {
             disabled={isSubmitting}
             className='mt-4 w-full text-white bg-darkp p-4 rounded-2xl font-semibold '
           >
-            Sing Up
+            Sign Up
           </button>
         </form>
       </div>
