@@ -60,7 +60,9 @@ const SubmitOTP: FC<SubmitOTPprops> = ({}) => {
               setOtp(e.target.value), setError('')
             }}
           />
-          {error != '' && <p>{error}</p>}
+          {error != '' && (
+            <p className='text-red-500 text-xs -mt-2 py-2'>{error}</p>
+          )}
           <button
             className='mt-4 w-full text-white bg-darkp p-4 rounded-2xl font-semibold'
             onClick={submitMyOtp}
