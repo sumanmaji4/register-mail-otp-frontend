@@ -82,7 +82,7 @@ const SignIn: FC<SigninProps> = ({}) => {
             to='/signup'
             className=' w-full border-darkp border-2 p-4 rounded-2xl font-semibold text-darkp text-center'
           >
-            Sing Up
+            Sign Up
           </Link>
         </form>
       </div>
