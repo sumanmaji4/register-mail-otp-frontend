@@ -33,7 +33,9 @@ const SubmitOTP: FC<SubmitOTPprops> = ({}) => {
       localStorage.setItem('tokendata', JSON.stringify(res.data))
       navigate('/dashboard')
     } else {
+      console.log(res.response.data)
       setError('Someth!ng went wr0ng')
+      if (res.response.data) setError(res.response.data.error)
     }
     setLoading(false)
   }

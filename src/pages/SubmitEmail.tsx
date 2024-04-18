@@ -35,6 +35,9 @@ const SubmitEmail: FC<SubmitEmailprops> = ({}) => {
     //send OTP to mail id
     if (res.status === 201) {
       navigate('/submitotp')
+    } else {
+      // console.log(res)
+      setError(res.response.data.error)
     }
     setLoading(false)
   }
@@ -59,7 +62,9 @@ const SubmitEmail: FC<SubmitEmailprops> = ({}) => {
               setEmail(e.target.value), setError('')
             }}
           />
-          {error != '' && <p>{error}</p>}
+          {error != '' && (
+            <p className='text-red-500 text-xs -mt-2 py-2'>{error}</p>
+          )}
           <button
             className='mt-4 w-full text-white bg-darkp p-4 rounded-2xl font-semibold'
             onClick={sendOtp}
